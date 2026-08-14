@@ -3,24 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quote Generator</title>
+
+    <title>QuoteVerse ✨</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="quote-container">
+    <div class="app">
 
-        <h1>Random Quote Generator</h1>
+        <header>
+            <div class="logo">✨ QuoteVerse</div>
+            <p>Words that inspire your journey</p>
 
-        <div class="quote-box">
-            <p id="quote">Click the button to get a quote.</p>
-            <p id="author">— Author</p>
-        </div>
+            <button id="themeBtn" class="theme-btn">
+                🌙
+            </button>
+        </header>
 
-        <button id="newQuoteBtn">New Quote</button>
+        <main>
+
+            <div class="quote-card" id="quoteCard">
+
+                <div class="top-row">
+                    <span id="category">✨ Motivation</span>
+                    <button id="favoriteBtn" class="icon-btn">
+                        ♡
+                    </button>
+                </div>
+
+                <div class="quote-icon">❝</div>
+
+                <p id="quote">
+                    Believe in yourself and keep moving forward.
+                </p>
+
+                <h3 id="author">
+                    — Unknown
+                </h3>
+
+                <div class="card-line"></div>
+
+                <div class="actions">
+
+                    <button id="copyBtn">
+                        📋 Copy
+                    </button>
+
+                    <button id="shareBtn">
+                        📤 Share
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button id="newQuoteBtn" class="new-quote">
+                🔄 New Quote
+            </button>
+
+            <div class="stats">
+                <div>
+                    <span>💫</span>
+                    <p>Quotes Viewed</p>
+                    <strong id="counter">0</strong>
+                </div>
+
+                <div>
+                    <span>❤️</span>
+                    <p>Favorites</p>
+                    <strong id="favoriteCount">0</strong>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>✨ Take a moment. Read a quote. Inspire yourself.</p>
+        </footer>
 
     </div>
+
+    <div id="toast"></div>
 
     <script src="script.js"></script>
 
