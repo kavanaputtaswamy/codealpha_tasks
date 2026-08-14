@@ -3,33 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard Quiz App</title>
+
+    <title>FlashMind 🧠 | Flashcard Quiz</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="app">
 
-        <h1>Flashcard Quiz App</h1>
+        <header>
+            <h1>🧠 FlashMind</h1>
+            <p>Learn • Practice • Remember</p>
+        </header>
 
-        <div class="flashcard">
-            <div id="question">Question will appear here</div>
-            <div id="answer" class="hidden">Answer will appear here</div>
+        <div class="progress-area">
+            <span id="cardNumber">Card 1 of 5</span>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
         </div>
 
-        <button id="showAnswerBtn">Show Answer</button>
+        <main>
 
-        <div class="navigation">
-            <button id="prevBtn">Previous</button>
-            <button id="nextBtn">Next</button>
+            <div class="flashcard" id="flashcard">
+
+                <div class="card-content">
+
+                    <span class="label" id="cardLabel">QUESTION</span>
+
+                    <h2 id="question">
+                        What is HTML?
+                    </h2>
+
+                    <p id="answer" class="hidden">
+                        HTML stands for HyperText Markup Language.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button class="show-btn" id="showAnswerBtn">
+                👀 Show Answer
+            </button>
+
+            <div class="navigation">
+                <button id="prevBtn">⬅️ Previous</button>
+                <button id="nextBtn">Next ➡️</button>
+            </div>
+
+        </main>
+
+        <section class="manage">
+
+            <h2>📚 Manage Flashcards</h2>
+
+            <div class="manage-buttons">
+                <button id="addBtn">➕ Add Card</button>
+                <button id="editBtn">✏️ Edit Card</button>
+                <button id="deleteBtn">🗑️ Delete Card</button>
+            </div>
+
+        </section>
+
+        <div id="formArea" class="form-area hidden">
+
+            <input
+                type="text"
+                id="questionInput"
+                placeholder="Enter your question"
+            >
+
+            <input
+                type="text"
+                id="answerInput"
+                placeholder="Enter the answer"
+            >
+
+            <div>
+                <button id="saveBtn">💾 Save</button>
+                <button id="cancelBtn">❌ Cancel</button>
+            </div>
+
         </div>
 
-        <div class="management">
-            <button id="addBtn">Add Card</button>
-            <button id="editBtn">Edit Card</button>
-            <button id="deleteBtn">Delete Card</button>
-        </div>
+        <footer>
+            <p>✨ Keep learning, one card at a time!</p>
+        </footer>
 
     </div>
 
